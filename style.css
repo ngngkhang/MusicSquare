@@ -1,0 +1,247 @@
+body {
+  font-family: "Poppins-Medium", sans-serif;
+  background: linear-gradient(to right, #9a1d86, #1595be);
+  font-weight: bold;
+}
+
+.player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper {
+  overflow: hidden;
+  border: 1px solid transparent;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #430020;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.track-art1 {
+    width: 270px;
+    height: 270px;
+    width: 270px;
+    height: 270px;
+    top: 0;
+    left: 0;
+    background-color: #fda5af33;
+    border-radius: 135px;
+    box-shadow: 0px 0px 0px #270c191a, 0px 10px 21px #270c191a, 1px 39px 39px #270c1917, 3px 87px 52px #270c190d,
+      5px 154px 62px #270c1903, 8px 241px 68px transparent;
+  
+}
+.track-art {
+  display: flex;
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  border-radius: 270px;
+  background: rgba(254, 165, 176, 0.20);
+  box-shadow: 0px 0px 0px 0px rgba(39, 12, 25, 0.10), 0px 10px 21px 0px rgba(39, 12, 25, 0.10), 1px 39px 39px 0px rgba(39, 12, 25, 0.09), 3px 87px 52px 0px rgba(39, 12, 25, 0.05), 5px 154px 62px 0px rgba(39, 12, 25, 0.01), 8px 241px 68px 0px rgba(39, 12, 25, 0.00);
+  background-size: cover;
+  background-position: center;
+  border: transparent;
+}
+
+.now-playing {
+  font-size: 1rem;
+  color: #fffafa;
+}
+
+.track-name {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.track-artist {
+  color: rgba(254, 165, 176, 0.5);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.active {
+  color: black;
+}
+
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 25px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+  opacity: 1;
+}
+
+.slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek_slider,
+.volume_slider {
+  accent-color: #ec4899;
+  height: 5px;
+  background: #83a9ff;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.seek_slider{
+  width: 382.012px;
+  flex-shrink: 0;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 3px solid #3774ff;
+  cursor: grab;
+  border-radius: 100%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time,
+.total-duration {
+  color: rgba(254, 165, 176, 0.50);
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward,
+p {
+  cursor: pointer;
+  color: #fea5b0;
+}
+.randomActive {
+  color: black;
+}
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.list {
+  display: inline-block;
+  margin-bottom: -38px;
+  margin-left: -38px;
+  margin-right: -38px;
+  width: 500px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 60px 60px 0px 0px;
+  background: rgba(254, 165, 176, 0.14);
+  bottom: 0;
+}
+/* .loader {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader .stroke {
+  background: #f1f1f1;
+  height: 150%;
+  width: 10px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: animate 1.4s linear infinite;
+}
+@keyframes animate {
+  50% {
+    height: 20%;
+    background: #4286f4;
+  }
+
+  100% {
+    background: #4286f4;
+    height: 100%;
+  }
+}
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(7) {
+  animation-delay: 0s;
+} */
