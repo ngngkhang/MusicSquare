@@ -131,10 +131,6 @@ line-height: normal;
   justify-content: center;
   align-items: center;
 }
-#slider_duration {
-
-}
-
 .seek_slider,
 .volume_slider {
   accent-color: #ec4899;
