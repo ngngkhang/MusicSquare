@@ -1,7 +1,16 @@
 body {
   font-family: "Poppins-Medium", sans-serif;
-  background: linear-gradient(to right, #9a1d86, #1595be);
+  background-color: #bbb6ca;
   font-weight: bold;
+}
+.background {
+  position: relative;
+  width: 430px;
+  height: 932px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #430020;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.5);
 }
 
 .player {
@@ -12,9 +21,9 @@ body {
   justify-content: center;
 }
 .wrapper {
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 1px solid transparent;
-  padding: 30px;
+  /* padding: 30px; */
   border-radius: 20px;
   background-color: #430020;
 
@@ -28,6 +37,12 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 27px 0 26px;
 }
 .track-art1 {
     width: 270px;
@@ -56,8 +71,13 @@ body {
 }
 
 .now-playing {
-  font-size: 1rem;
-  color: #fffafa;
+  align-self: center;
+  color: #F5F5F5;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
 
 .track-name {
@@ -111,17 +131,20 @@ body {
   justify-content: center;
   align-items: center;
 }
+#slider_duration {
+
+}
 
 .seek_slider,
 .volume_slider {
   accent-color: #ec4899;
-  height: 5px;
+  height: 3px;
   background: #83a9ff;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
+  transition: opacity 0.01s;
 }
 .seek_slider{
-  width: 382.012px;
+  position: relative;
+  width: 60%;
   flex-shrink: 0;
 }
 
@@ -142,7 +165,7 @@ body {
 }
 
 .seek_slider {
-  width: 60%;
+  width: 70%;
 }
 
 .volume_slider {
@@ -152,6 +175,7 @@ body {
 .current-time,
 .total-duration {
   color: rgba(254, 165, 176, 0.50);
+  padding-top: 70px;
 font-family: Poppins;
 font-size: 20px;
 font-style: normal;
@@ -187,17 +211,27 @@ p {
     transform: rotate(359deg);
   }
 }
+
 .list {
-  display: inline-block;
-  margin-bottom: -38px;
-  margin-left: -38px;
-  margin-right: -38px;
-  width: 500px;
-  height: 100px;
-  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
   border-radius: 60px 60px 0px 0px;
   background: rgba(254, 165, 176, 0.14);
-  bottom: 0;
+    width: 435px;
+    height: 75px;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFF !important;
+  font-family: Poppins;
+}
+.list i {
+  position: relative;
+  right: 178px;
+  bottom: -18px;
 }
 /* .loader {
   height: 70px;

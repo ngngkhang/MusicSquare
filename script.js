@@ -59,33 +59,33 @@ function loadTrack(track_index){
     track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
     track_name.textContent = music_list[track_index].name;
     track_artist.textContent = music_list[track_index].artist;
-    now_playing.textContent = "Playing music " + (track_index + 1) + " of " + music_list.length;
+    // now_playing.textContent = "Playing music " + (track_index + 1) + " of " + music_list.length;
 
-    updateTimer = setInterval(setUpdate, 1000);
+    updateTimer = setInterval(setUpdate, 300);
 
     curr_track.addEventListener('ended', nextTrack);
-    random_bg_color();
+    // random_bg_color();
 }
 
-function random_bg_color(){
-    let hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'];
-    let a;
+// function random_bg_color(){
+//     let hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'];
+//     let a;
 
-    function populate(a){
-        for(let i=0; i<6; i++){
-            let x = Math.round(Math.random() * 14);
-            let y = hex[x];
-            a += y;
-        }
-        return a;
-    }
-    let Color1 = populate('#');
-    let Color2 = populate('#');
-    var angle = 'to right';
+//     function populate(a){
+//         for(let i=0; i<6; i++){
+//             let x = Math.round(Math.random() * 14);
+//             let y = hex[x];
+//             a += y;
+//         }
+//         return a;
+//     }
+//     let Color1 = populate('#');
+//     let Color2 = populate('#');
+//     var angle = 'to right';
 
-    let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
-    document.body.style.background = gradient;
-}
+//     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
+//     document.body.style.background = gradient;
+// }
 function reset(){
     curr_time.textContent = "00:00";
     total_duration.textContent = "00:00";
@@ -159,7 +159,7 @@ function setUpdate(){
         seek_slider.value = seekPosition;
 
         let currentMinutes = Math.floor(curr_track.currentTime / 60);
-        let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+        let currentSeconds = Math.floor(0.5+curr_track.currentTime - currentMinutes * 60);
         let durationMinutes = Math.floor(curr_track.duration / 60);
         let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
 
@@ -171,4 +171,7 @@ function setUpdate(){
         curr_time.textContent = currentMinutes + ":" + currentSeconds;
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
     }
+console.log(curr_track.currentTime)
+// console.log(curr_track.duration)
+
 }
